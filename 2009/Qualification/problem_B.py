@@ -13,7 +13,6 @@
 import sys
 
 input_file = sys.argv[1]
-T = 0
 
 with open(input_file, 'r') as input_f:
     T = int(input_f.readline().strip())
@@ -70,7 +69,8 @@ with open(input_file, 'r') as input_f:
             for y in xrange(0, W):
                 if f_map[x][y] == 0:
                     f_map[x][y] = label
-                    label = chr(ord(label) + 1)
+                    order = ord(label) + 1
+                    label = chr(order)
 
         not_full = True
         while not_full:
@@ -100,12 +100,12 @@ with open(input_file, 'r') as input_f:
                             not_full = True
 
         translate = {}
-        label = 'a'
+        label2 = 'a'
         for x in xrange(0, H):
             for y in xrange(0, W):
                 if f_map[x][y] not in translate:
-                    translate[f_map[x][y]] = label
-                    label = chr(ord(label) + 1)
+                    translate[f_map[x][y]] = label2
+                    label2 = chr(ord(label2) + 1)
 
         for x in xrange(0, H):
             for y in xrange(0, W):

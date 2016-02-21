@@ -11,6 +11,7 @@
 ################################################################################
 import sys
 
+
 input_path = sys.argv[1]
 
 pattern = 'welcome to code jam'

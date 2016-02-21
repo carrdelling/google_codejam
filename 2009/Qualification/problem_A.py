@@ -13,9 +13,6 @@
 import sys
 
 input_file = sys.argv[1]
-L = 0
-D = 0
-N = 0
 
 with open(input_file, 'r') as input_f:
     header = input_f.readline()

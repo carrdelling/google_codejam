@@ -62,7 +62,8 @@ def solve(_f, rr, _t, rad, _g):
     for i in xrange(0, n):
         for j in xrange(0, n):
             area += square_area(rad + _f + (2.0 * rad + _g) * i,
-                                rad + _f + (2.0 * rad + _g) * j, a, rr - _t - _f)
+                                rad + _f + (2.0 * rad + _g) * j, a,
+                                rr - _t - _f)
 
     output = 1.0 - 4.0 * area / (pi * rr * rr)
 
