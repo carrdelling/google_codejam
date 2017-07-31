@@ -35,7 +35,7 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
         message = input_file.readline()
         solution = solve(message)
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))

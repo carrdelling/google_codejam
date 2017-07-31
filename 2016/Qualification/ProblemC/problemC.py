@@ -20,7 +20,7 @@ def use_sieve(n):
     sieve = [1]*size
 
     limit = int(n**0.5)
-    for i in xrange(1, limit):
+    for i in range(1, limit):
         if sieve[i]:
             val = 2*i+1
             tmp = ((size-1) - i)//val
@@ -57,7 +57,7 @@ def solve(n, j):
         coin = "{0:b}".format(coin)
 
         divisors = []
-        for base in xrange(2, 11):
+        for base in range(2, 11):
             value = int(coin, base)
             divisor = test_prime(value, primes)
 
@@ -81,7 +81,7 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
         N, J = map(int, input_file.readline().strip().split())
         solution = solve(N, J)
-        print 'Case #{0}:{1}'.format(case, solution)
+        print('Case #{0}:{1}'.format(case, solution))

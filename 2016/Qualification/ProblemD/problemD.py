@@ -21,7 +21,7 @@ def solve(k, c, s):
 
     to_guess = k
     tiles = []
-    for student in xrange(s):
+    for _ in range(s):
 
         targets = range(to_guess, to_guess-c, -1)
         targets = [max(t, 0) for t in targets]
@@ -48,7 +48,7 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
         K, C, S = map(int, input_file.readline().strip().split())
         solution = solve(K, C, S)
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))

@@ -24,10 +24,10 @@ with open(input_file, 'r') as input_f:
     dicts = [dict()] * L
     all_words = set()
 
-    for i in xrange(0, L):
+    for i in range(L):
         dicts[i] = {}
 
-    for i in xrange(0, D):
+    for i in range(D):
         word = input_f.readline().strip()
 
         for index, c in enumerate(word):
@@ -38,7 +38,7 @@ with open(input_file, 'r') as input_f:
             dicts[index][c].add(word)
         all_words.add(word)
 
-    for i in xrange(0, N):
+    for i in range(N):
 
         pattern = input_f.readline().strip()
         possible = set(all_words)
@@ -72,4 +72,4 @@ with open(input_file, 'r') as input_f:
                 else:
                     multiple.append(c)
 
-        print 'Case #%d: %d' % (i + 1, len(possible))
+        print('Case #%d: %d' % (i + 1, len(possible)))

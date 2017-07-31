@@ -39,10 +39,10 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for i in xrange(n_cases):
+    for i in range(n_cases):
 
         n_value, k_value = map(int, input_file.readline().strip().split())
 
         solution = solve(n_value, k_value)
 
-        print 'Case #%d: %s' % (i+1, solution)
+        print('Case #%d: %s' % (i+1, solution))

@@ -34,9 +34,9 @@ with open(input_path) as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
         N = int(input_file.readline().strip())
         rows = [input_file.readline().strip().split()
-                for i in xrange(0, (2*N)-1)]
+                for i in range(0, (2*N)-1)]
         solution = solve(rows)
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))

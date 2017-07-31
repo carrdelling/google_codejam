@@ -33,7 +33,7 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
         stack = list(input_file.readline().strip())
         solution = solve(stack)
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))

@@ -59,8 +59,8 @@ def solve(_f, rr, _t, rad, _g):
 
     area = 0.0
 
-    for i in xrange(0, n):
-        for j in xrange(0, n):
+    for i in range(n):
+        for j in range(n):
             area += square_area(rad + _f + (2.0 * rad + _g) * i,
                                 rad + _f + (2.0 * rad + _g) * j, a,
                                 rr - _t - _f)
@@ -78,9 +78,9 @@ if __name__ == '__main__':
 
         nCases = int(input_file.readline())
 
-        for case in xrange(0, nCases):
+        for case in range(nCases):
             f, r, t, _r, g = map(float, input_file.readline().strip().split())
 
             solution = solve(f, r, t, _r, g)
 
-            print 'Case #%d: %.6f' % ((case + 1), solution)
+            print('Case #%d: %.6f' % ((case + 1), solution))

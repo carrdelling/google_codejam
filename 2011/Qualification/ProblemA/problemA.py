@@ -51,11 +51,11 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
 
         sequence = input_file.readline().strip().split()[1:]
         sequence = zip(sequence[:-1], sequence[1:])[::2]
         sequence = [(x, int(y)) for (x, y) in sequence]
 
         solution = solve(sequence)
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))

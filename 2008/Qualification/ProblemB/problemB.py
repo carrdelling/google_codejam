@@ -93,15 +93,15 @@ if __name__ == '__main__':
             trip_a_list = []
             trip_b_list = []
 
-            for i in xrange(0, A):
+            for i in range(A):
                 time = input_file.readline().strip()
                 trip_a_list.append(time)
 
-            for i in xrange(0, B):
+            for i in range(B):
                 time = input_file.readline().strip()
                 trip_b_list.append(time)
 
             solution_A, solution_B = solve(turnover_value, trip_a_list,
                                            trip_b_list)
 
-            print 'Case #%d: %d %d' % ((case+1), solution_A, solution_B)
+            print('Case #%d: %d %d' % ((case+1), solution_A, solution_B))

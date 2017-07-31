@@ -17,7 +17,7 @@ input_file = sys.argv[1]
 with open(input_file, 'r') as input_f:
     T = int(input_f.readline().strip())
 
-    for case in xrange(1, T + 1):
+    for case in range(1, T + 1):
 
         H, W = input_f.readline().strip().split()
         H = int(H)
@@ -25,18 +25,18 @@ with open(input_file, 'r') as input_f:
 
         t_map = [[]] * H
 
-        for row in xrange(0, H):
+        for row in range(0, H):
             data = input_f.readline().strip().split()
             t_map[row] = [int(x) for x in data]
 
         f_map = []
 
-        for row in xrange(0, H):
+        for row in range(0, H):
 
             f_map.append([-1] * W)
 
-        for x in xrange(0, H):
-            for y in xrange(0, W):
+        for x in range(0, H):
+            for y in range(0, W):
 
                 ground = t_map[x][y]
                 f_map[x][y] = 0
@@ -64,19 +64,19 @@ with open(input_file, 'r') as input_f:
                     ground = t_map[x + 1][y]
                     f_map[x][y] = 4
 
-        label = 'a'
-        for x in xrange(0, H):
-            for y in xrange(0, W):
+        bux = 'a'
+        for x in range(H):
+            for y in range(W):
                 if f_map[x][y] == 0:
-                    f_map[x][y] = label
-                    order = ord(label) + 1
-                    label = chr(order)
+                    f_map[x][y] = bux
+                    order = ord(bux) + 1
+                    bux = chr(order)
 
         not_full = True
         while not_full:
             not_full = False
-            for x in xrange(0, H):
-                for y in xrange(0, W):
+            for x in range(H):
+                for y in range(W):
                     if f_map[x][y] not in [1, 2, 3, 4]:
 
                         # north
@@ -100,17 +100,17 @@ with open(input_file, 'r') as input_f:
                             not_full = True
 
         translate = {}
-        label2 = 'a'
-        for x in xrange(0, H):
-            for y in xrange(0, W):
+        aux2 = 'a'
+        for x in range(0, H):
+            for y in range(0, W):
                 if f_map[x][y] not in translate:
-                    translate[f_map[x][y]] = label2
-                    label2 = chr(ord(label2) + 1)
+                    translate[f_map[x][y]] = aux2
+                    aux2 = chr(ord(aux2) + 1)
 
-        for x in xrange(0, H):
-            for y in xrange(0, W):
+        for x in range(0, H):
+            for y in range(0, W):
                 f_map[x][y] = translate[f_map[x][y]]
 
-        print 'Case #%d:' % case
-        for x in xrange(0, H):
-            print ' '.join(f_map[x])
+        print('Case #%d:' % case)
+        for x in range(H):
+            print(' '.join(f_map[x]))

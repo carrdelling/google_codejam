@@ -19,18 +19,18 @@ pattern = 'welcome to code jam'
 with open(input_path, 'r') as input_file:
     cases = int(input_file.readline().strip())
 
-    for i in xrange(1, cases + 1):
+    for i in range(1, cases + 1):
 
         line = input_file.readline().strip()
         dp = [0] * len(pattern)
 
         for c in line:
 
-            for index in xrange(0, len(dp)):
+            for index in range(len(dp)):
 
                 if pattern[index] == c:
 
                     dp[index] = (dp[index] + dp[
                         index - 1]) % 10000 if index > 0 else dp[index] + 1
 
-        print 'Case #%d: %04d' % (i, dp[len(dp) - 1])
+        print('Case #%d: %04d' % (i, dp[len(dp) - 1]))

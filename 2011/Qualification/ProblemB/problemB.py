@@ -47,13 +47,13 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
 
         sequence = input_file.readline().strip().split()
         C = int(sequence[0])
 
         combinations = {}
-        for i in xrange(0, C):
+        for i in range(0, C):
             comb = sequence[i+1]
             c_1 = comb[0]
             c_2 = comb[1]
@@ -69,7 +69,7 @@ with open(input_path, 'r') as input_file:
         D = int(sequence[C+1])
 
         destructions = {}
-        for i in xrange(1, D+1):
+        for i in range(1, D+1):
             dest = sequence[C+1+i]
             d_1 = dest[0]
             d_2 = dest[1]
@@ -87,4 +87,4 @@ with open(input_path, 'r') as input_file:
         invok = list(sequence[C+D+3])
         solution = solve(combinations, destructions, invok)
 
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))

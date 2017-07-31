@@ -57,4 +57,4 @@ if __name__ == '__main__':
 
             solution = solve(engines, queries)
 
-            print 'Case #%d: %d' % ((case+1), solution)
+            print('Case #%d: %d' % ((case+1), solution))

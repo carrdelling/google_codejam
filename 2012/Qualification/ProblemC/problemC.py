@@ -17,7 +17,7 @@ def seek_pair(n, a, b):
 
     initial = str(n)
 
-    for i in xrange(1, len(initial)):
+    for i in range(1, len(initial)):
 
         current = int(initial[-i:] + initial[:-i])
 
@@ -31,7 +31,7 @@ def solve(down, up):
 
     down = max(down, 12)
 
-    for number in xrange(down, up+1):
+    for number in range(down, up+1):
 
         for pair in seek_pair(number, down, up):
             option = (min(pair, number), max(pair, number))
@@ -46,8 +46,8 @@ with open(input_path, 'r') as input_file:
 
     n_cases = int(input_file.readline().strip())
 
-    for case in xrange(1, n_cases+1):
+    for case in range(1, n_cases+1):
         A, B = map(int, input_file.readline().strip().split())
         solution = solve(A, B)
 
-        print 'Case #{0}: {1}'.format(case, solution)
+        print('Case #{0}: {1}'.format(case, solution))
