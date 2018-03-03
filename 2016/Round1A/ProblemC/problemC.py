@@ -4,7 +4,7 @@
 #
 # Google Code Jam - 2016
 #
-# Round 1 - Problem C - BFFs
+# Round 1A - Problem C - BFFs
 #
 # Joaquin Derrac - carrdelling@gmail.com
 #

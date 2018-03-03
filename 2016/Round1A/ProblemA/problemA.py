@@ -4,7 +4,7 @@
 #
 # Google Code Jam - 2016
 #
-# Round 1 - Problem A - The Last Word
+# Round 1A - Problem A - The Last Word
 #
 # Joaquin Derrac - carrdelling@gmail.com
 #

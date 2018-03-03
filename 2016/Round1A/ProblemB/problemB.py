@@ -4,7 +4,7 @@
 #
 # Google Code Jam - 2016
 #
-# Round 1 - Problem B - Rank and File
+# Round 1A - Problem B - Rank and File
 #
 # Joaquin Derrac - carrdelling@gmail.com
 #
