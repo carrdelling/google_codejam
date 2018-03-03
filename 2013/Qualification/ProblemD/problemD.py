@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+
+################################################################################
+#
+# Google Code Jam - 2013
+#
+# Qualification round - Problem D - Treasure
+#
+# Joaquin Derrac - carrdelling@gmail.com
+#
+################################################################################
+
+import sys
 from copy import copy
 from collections import Counter
 
@@ -95,7 +108,9 @@ def start_solve(initial_keys, chests, memo):
 
 if __name__ == "__main__":
 
-    with open('input2.txt') as input_file:
+    input_path = sys.argv[1]
+
+    with open(input_path) as input_file:
 
         cases = int(input_file.readline())
 

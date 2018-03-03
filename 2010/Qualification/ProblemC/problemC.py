@@ -4,7 +4,7 @@
 #
 # Google Code Jam - 2010
 #
-# Qualification round - Problem C
+# Qualification round - Problem C - Theme Park
 #
 # Joaquin Derrac - carrdelling@gmail.com
 #

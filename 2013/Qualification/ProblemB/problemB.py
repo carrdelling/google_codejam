@@ -4,7 +4,7 @@
 #
 # Google Code Jam - 2013
 #
-# Qualification round - Problem A - Tic-Tac-Toe-Tomek
+# Qualification round - Problem B - Lawnmower
 #
 # Joaquin Derrac - carrdelling@gmail.com
 #

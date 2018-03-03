@@ -38,7 +38,7 @@ with open(input_path, 'r') as input_file:
     for case in range(1, n_cases+1):
 
         N = int(input_file.readline().strip())
-        candy = map(int, input_file.readline().strip().split())
+        candy = list(map(int, input_file.readline().strip().split()))
 
         solution = solve(candy)
 
